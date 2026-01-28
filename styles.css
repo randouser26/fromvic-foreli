@@ -1,0 +1,136 @@
+body { 
+  font-family: "Snell Roundhand", cursive;
+  background:#660810; 
+  margin:0; 
+}
+main {
+  max-width: 500px;
+  margin: 70px auto;
+  padding: 32px;
+  border-radius: 1px;
+
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color:#000000;
+  margin-top:0;
+}
+mark { 
+  background:#fffd91;
+}
+
+/* Center the options */
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Hide the real radio button */
+.option input {
+  display: none;
+}
+
+/* Style the label */
+.option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Snell Roundhand", "Great Vibes", cursive;
+  font-size: 1.4rem;
+  color: #000000;
+  position: relative;
+}
+
+/* The box */
+.option::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+
+/* Keep checkmark inside the box when selected */
+.option input:checked + .text::before {
+  content: "✓";
+  position: absolute;
+  left: 0;        /* aligns with the box */
+  top: 0;
+  width: 20px;
+}
+
+
+button:hover { 
+  background:#000000; 
+}
+.button-container { 
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* space between buttons */
+  margin-top: 1.5rem;
+}
+
+@keyframes wiggle {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-6px); }
+  50%  { transform: translateX(6px); }
+  75%  { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.no-option {
+  position: relative;
+  transition: transform 0.10s ease;
+}
+
+.no-option:hover {
+  transform: translate(
+    calc(-40px + 80px * var(--rand-x)),
+    calc(-20px + 40px * var(--rand-y))
+  );
+}
+
+/* Popup background */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+.popup-content {
+  background: #660810;
+  color: #ffecf6;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  max-width: 600px;
+  animation: pop 0.3s ease;
+}
+
+.popup-content img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

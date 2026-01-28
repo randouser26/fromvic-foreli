@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>from vic</title>
+</head>
+<body>
+  <main>
+    <h1 style="text-align:center;">happy love month, eli ♥</h1>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;You have been the greatest partner I could ever ask for. I have cherished every moment when I am with you. You have taught me what it really feels like to be in love and feel loved. There is nothing in this world that could ever replace you. </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;To my lover... </p>
+  <p style="text-align:center;">Will you be a Valentine?</p>
+
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="valentine" id="yesOption">
+        <span class="text">YES!!!!!!</span>
+      </label>
+
+      <label class="option no-option">
+        <input type="radio" name="valentine" value="no">
+        <span class="text">Hell no...</span>
+      </label>
+    </div>
+
+  </main>
+  <script>
+  const noOption = document.querySelector('.no-option');
+
+  noOption.addEventListener('mouseenter', () => {
+    const randX = (Math.random() - 0.5) * 300; // random left/right
+    const randY = (Math.random() - 0.5) * 150; // random up/down
+
+    noOption.style.transform = `translate(${randX}px, ${randY}px)`;
+  });
+  </script>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <a href="lovecoupon.png" download>
+        <img src="lovecoupon.png" alt="love coupon">
+      </a>
+    <p style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">YIPPEEE! now click on the coupon to save it for our date. can't wait to spend valentine's day with you &hearts;</p>
+    </div>
+  </div>
+
+  <script>
+    const yesOption = document.getElementById("yesOption");
+    const popup = document.getElementById("popup");
+
+    yesOption.addEventListener("change", () => {
+    popup.style.display = "flex";
+  });
+  </script>
+
+
+</body>
+</html>
