@@ -134,3 +134,43 @@ button:hover {
   to { transform: scale(1); opacity: 1; }
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #ff7aa2;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: 0.2s;
+  width: 30%;
+}
+
+.contact-form button:hover {
+  background-color: #ff6493;
+}
