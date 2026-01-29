@@ -45,6 +45,7 @@
 
   <div id="popup" class="popup">
     <div class="popup-content">
+      <button id="closePopup" class="close-btn">✖</button>
       <a href="lovecoupon.png" download>
         <img src="lovecoupon.png" alt="love coupon">
       </a>
@@ -57,7 +58,7 @@
      <input type="text" placeholder="name..." name="name" required>
      <input type="email" placeholder="email..." name="email" required>
      <textarea name="message" placeholder="message..." rows="4" required></textarea>
-     <button type="submit">send message to vic!</button>
+     <button type="submit">send message to vic</button>
     </form>
     </div>
   </div>
@@ -71,6 +72,20 @@
     });
     
   </script>
+  <script>
+  const closePopup = document.getElementById("closePopup");
+
+  closePopup.addEventListener("click", () => {
+    popup.classList.add("pop-out");
+
+    setTimeout(() => {
+      popup.style.display = "none";
+      popup.classList.remove("pop-out");
+    }, 250); // matches animation duration
+  });
+</script>
+
+
 
 
 </body>
