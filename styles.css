@@ -1,5 +1,6 @@
-body {
-  background:#660810; 
+body { 
+  background:#660810;
+  font-family: Apple Chancery, cursive;
   margin:0; 
 }
 main {
@@ -133,4 +134,3 @@ button:hover {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
-
