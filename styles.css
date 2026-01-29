@@ -41,7 +41,6 @@ mark {
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-family: "Snell Roundhand", "Great Vibes", cursive;
   font-size: 1.4rem;
   color: #000000;
   position: relative;
@@ -134,3 +133,4 @@ button:hover {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
