@@ -7,7 +7,9 @@
   <title>from vic</title>
 </head>
 <body>
+  <img src="blinkiesCafe-pN.gif" alt="#eevee" class="top-gif">
   <main>
+    <div class="letter-top-right" id="liveDateTime"></div>
     <h1 style="text-align:center;">happy love month, eli &#9825;</h1>
     <iframe data-testid="embed-iframe" style="border-radius:12px" 
     src="https://open.spotify.com/embed/track/751srcHf5tUqcEa9pRCQwP?
@@ -15,8 +17,10 @@
     allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;
     picture-in-picture" loading="lazy">
     </iframe>
+
     <p>&nbsp;&nbsp;&nbsp;&nbsp;You have been the greatest partner I could ever ask for. I have cherished every moment when I am with you. You have taught me what it really feels like to be in love and feel loved. There is nothing in this world that could ever replace you. </p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;To my lover... </p>
+    <img src="usagi.png" class="usagi-img">
   <p style="text-align:center;font-size:30px;">Will you be my Valentine...?</p>
 
     <div class="options">
@@ -30,8 +34,28 @@
         <span class="text">Hell no...</span>
       </label>
     </div>
+    <img src="redstamp.png" class="redstamp-img">
+
+  
+      <img src="pushpin.png" class="pushpin-img">
+      <img src="megumi_sticker.png" class="megumi-img">
+      <img src="poormegumi.png" class="poormegumi-img">
+      <img src="txt_sticker.png" class="txt_sticker-img">
+      <img src="ladybug.png" class="ladybug-img">
+      <img src="moonstamp.png" class="moonstamp-img">
+
+
+
+
+    
+
+
+    
 
   </main>
+
+  
+
   <script>
   const noOption = document.querySelector('.no-option');
 
@@ -73,17 +97,35 @@
     
   </script>
   <script>
-  const closePopup = document.getElementById("closePopup");
+    const closePopup = document.getElementById("closePopup");
 
-  closePopup.addEventListener("click", () => {
-    popup.classList.add("pop-out");
+    closePopup.addEventListener("click", () => {
+      popup.classList.add("pop-out");
 
-    setTimeout(() => {
-      popup.style.display = "none";
-      popup.classList.remove("pop-out");
-    }, 250); // matches animation duration
-  });
-</script>
+      setTimeout(() => {
+        popup.style.display = "none";
+        popup.classList.remove("pop-out");
+      }, 250); // matches animation duration
+    });
+  </script>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    };
+
+    document.getElementById("liveDateTime").textContent =
+      now.toLocaleString("en-US", options);
+    }
+
+    updateDateTime();            // run immediately
+    setInterval(updateDateTime, 1000); // update every second
+  </script>
+
 
 
 
