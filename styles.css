@@ -33,6 +33,9 @@ main {
   height: auto;
 }
 
+
+
+
 main {
   position: relative;
 }
@@ -231,23 +234,6 @@ button:hover {
 }
 
 
-.contact-form button {
-  padding: 10px;
-  background-color: #ff7aa2;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-family: 'Times New Roman', Times, serif;
-  transition: 0.2s;
-  width: 30%;
-}
-
-.contact-form button:hover {
-  position: relative;
-  background-color: #ff6493;
-}
 
 /* Allow mobile users to scroll inside the popup */
 .popup {
@@ -453,4 +439,37 @@ p {
   pointer-events: none;
 }
 
+.duck-gif {
+  width: 50px;     /* adjust to your liking */
+  height: auto;
+  display: block;
+  margin: 1px auto;
+}
+.popup-content img.duck-gif {
+  width: 30px;   /* overrides the 100% rule */
+}
 
+
+.send-button {
+  margin-top: 25px;          /* more space from the top */
+  padding: 10px 18px;        /* nicer shape */
+  background-color: #ff7aa2;
+  color: white;
+  border: none;
+  border-radius: 14px;       /* rounder, cuter shape */
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Segoe Print", cursive;
+  display: flex;             /* allows GIF + text to align */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                  /* space between GIF and text */
+  width: fit-content;        /* button hugs content */
+  margin-left: auto;         /* centers the button */
+  margin-right: auto;
+  transition: 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #ff6493;
+}
