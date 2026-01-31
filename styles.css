@@ -2,6 +2,10 @@ body {
   background:#660810;
   font-family: Apple Chancery, cursive;
   margin:0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 main {
   font-weight: 600;
@@ -358,18 +362,14 @@ main {
 }
 
 .megumi-img {
-  top: 720px;
-  left: 480px;
-  width: 100vw;
-  max-width: 150px;
-  /* sticker outline */
-  filter: drop-shadow(0 0 0 rgb(0, 0, 0))
-          drop-shadow(0 0 3px rgb(0, 0, 0))
-          drop-shadow(0 0 6px rgb(84, 84, 84));
-
-  /* optional: makes it pop like a real sticker */
-  border-radius: 8px;
+  position: absolute;
+  top: 95%;
+  left: 90%;
+  width: 30%;        /* bigger */
+  max-width: none;    /* removes the 80px cap from shared sticker rules */
+  transform: translate(-50%, -50%);
 }
+
 
 
 
@@ -410,12 +410,15 @@ p {
 
 .lace-top {
   position: absolute;
-  top: -40px;          /* sits right on the top edge */
+  top: -25px;     /* sits just above the letter edge */
   left: 0;
-  width: 100%;     /* matches letter width */
+  width: 100%;
   height: auto;
-  pointer-events: none;        /* keeps it decorative */
+  pointer-events: none;
 }
+
+
+
 
 .lace-bottom {
   position: absolute;
