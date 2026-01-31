@@ -67,7 +67,7 @@ main {
 
 
 h1 {
-  color:#000000;
+  color:#4a4a4a;
   margin-top:0;
 }
 mark { 
@@ -186,28 +186,49 @@ button:hover {
 }
 
 .contact-form {
+  width: 80;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
   text-align: center;
-  align-items: center
+  align-items: center;
+
+  background-image: url("notepad.png");  /* your notepad or paper */
+  background-size: contain;                  /* fills the box */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 20px;
+  border-radius: 12px;
 }
+
+
 
 .contact-form input,
 .contact-form textarea {
-  width: 70%;
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 8px;
-  font-family: 'Times New Roman', Times, serif;
+  width: 80%;              /* centered width */
+  margin: 0 auto;          /* centers them inside the form */
+  text-align: center;      /* centers the text inside the box */
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  color: #4a4a4a;
+  font-family: 'Segoe Print', cursive, sans-serif;
   font-size: 16px;
 }
+
 
 .contact-form textarea {
   height: 80px;
   resize: none;
+  border-radius: 8px;
+  height: 80px;
+  resize: none;
 }
+
 
 .contact-form button {
   padding: 10px;
@@ -216,13 +237,14 @@ button:hover {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'Times New Roman', Times, serif;
   transition: 0.2s;
   width: 30%;
 }
 
 .contact-form button:hover {
+  position: relative;
   background-color: #ff6493;
 }
 
