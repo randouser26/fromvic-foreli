@@ -93,17 +93,20 @@
       <a href="lovecoupon.png" download>
         <img src="lovecoupon.png" alt="love coupon">
       </a>
-    <p style="font-family: 'Times New Roman', Times, serif; font-size:30px;">yippeee!!! now TAP/CLICK on the coupon to save it for our date. can't wait to spend valentine's day with youuu &#9825;</p>
+    <p style="font-family: 'Times New Roman', Times, serif; font-size:20px;">yippeee!!! now TAP/CLICK on the coupon to save it for our date. can't wait to spend valentine's day with youuu &#9825;</p>
     <p style="font-family: 'Times New Roman', Times, serif; ">want to send a message? complete the form below</p>
     <p style="font-family: 'Times New Roman', Times, serif">(after completing the form, it will redirect you to confirm that your e-mail is real. the link is completely safe, do not worry. i've already tested it myself!)</p>
-    <form class="contact-form" action="https://formsubmit.co/victoriathii@icloud.com" method="POST">
+    <form id="contact-form" class="contact-form" action="https://formsubmit.co/victoriathii@icloud.com" method="POST">
      <input type="hidden" name="_captcha" value="false">
      <input type="hidden" name="_subject" value="&#9825;&#9825; Message from Eli &#9825;&#9825;">
      <input type="text" placeholder="name..." name="name" required>
      <input type="email" placeholder="email..." name="email" required>
      <textarea  name="message" placeholder="message..." rows="4" required></textarea>
-     <button type="submit">click to send</button>
     </form>
+      <button class="send-button" type="submit" form="contact-form">
+        <img class="duck-gif" src="duckmail.gif" alt="cute gif">
+        click to send
+      </button>
     </div>
   </div>
 
