@@ -8,6 +8,7 @@ main {
   max-width: 500px;
   margin: 0 auto;              /* sits flush under the GIF */
   padding: 48px 40px;          /* more breathing room like real paper */
+  padding-top: 120px;;
   border-radius: 1px;          /* soft corners like stationery */
 
   background-image: url("letter1.jpg");
@@ -21,6 +22,11 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* floating paper effect */
   line-height: 1.6;                        /* softer, more romantic spacing */
   
+}
+
+.love-gif {
+  width: 29px; /* adjust as needed */
+  height: auto;
 }
 
 main {
@@ -124,9 +130,9 @@ button:hover {
 
 @keyframes wiggle {
   0%   { transform: translateX(0); }
-  25%  { transform: translateX(-6px); }
-  50%  { transform: translateX(6px); }
-  75%  { transform: translateX(-4px); }
+  25%  { transform: translateX(-50px); }
+  50%  { transform: translateX(100px); }
+  75%  { transform: translateX(-50px); }
   100% { transform: translateX(0); }
 }
 
@@ -287,21 +293,23 @@ main {
   z-index: 999;       /* ensures stickers sit above the letter */
 }
 
-.pushpin-img {
-  position: absolute;
-  top: -1px;              /* sits above the letter */
-  left: 50%;               /* center horizontally */
-  transform: translateX(-50%) rotate(2deg);
-  width: 45px;
-  z-index: 999;            /* stays above the letter */
-}
+
 
 
 .usagi-img {
   position: relative;
-  width: 43%;
+  display: block;
+  width: 20%;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: -30px;
+  margin-bottom: 1px;
+  filter: drop-shadow(0 0 0 rgb(123, 123, 123))
+          drop-shadow(0 0 3px rgb(69, 69, 69))
+          drop-shadow(0 0 6px rgb(84, 84, 84));
+
+  /* optional: makes it pop like a real sticker */
+  border-radius: 8px;
 }
 
 
@@ -309,7 +317,6 @@ main {
 .poormegumi-img,
 .txt_sticker-img,
 .ladybug-img,
-.moonstamp-img,
 .redstamp-img {
   position: absolute;
   width: 10vw;
@@ -317,15 +324,33 @@ main {
   height: auto;
   pointer-events: none;
   z-index: 999;
+
+  /* sticker outline */
+  filter: drop-shadow(0 0 0 rgb(0, 0, 0))
+          drop-shadow(0 0 3px rgb(0, 0, 0))
+          drop-shadow(0 0 6px rgb(84, 84, 84));
+
+  /* optional: makes it pop like a real sticker */
+  border-radius: 8px;
+  
 }
 
 .poormegumi-img {
-  top: -60px;
-  left: -40px;
-  transform: rotate(-20deg);
-  width: 30vw;
-  max-width: 150px;
+  top: 10px;
+  left: 25px;
+  width: 50vw;
+  max-width: 120px;
+
+  /* sticker outline */
+  filter: drop-shadow(0 0 0 rgb(0, 0, 0))
+          drop-shadow(0 0 3px rgb(0, 0, 0))
+          drop-shadow(0 0 6px rgb(84, 84, 84));
+
+  /* optional: makes it pop like a real sticker */
+  border-radius: 8px;
 }
+
+
 
 .moonstamp-img {
   top: 35px;
@@ -333,35 +358,73 @@ main {
 }
 
 .megumi-img {
-  bottom: -50px;
-  right: -100px;
-  transform: rotate(-3deg);
-  width: 50vw;
-  max-width: 200px;
+  top: 720px;
+  left: 480px;
+  width: 100vw;
+  max-width: 150px;
+  /* sticker outline */
+  filter: drop-shadow(0 0 0 rgb(0, 0, 0))
+          drop-shadow(0 0 3px rgb(0, 0, 0))
+          drop-shadow(0 0 6px rgb(84, 84, 84));
+
+  /* optional: makes it pop like a real sticker */
+  border-radius: 8px;
 }
 
-.redstamp-img {
-  bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-4deg);
-  width: 18vw;
-  max-width: 70px;
-}
+
+
+/*
+
+<img src="txt_sticker.png" class="txt_sticker-img">
 
 .txt_sticker-img {
-  top: 22%;
+  top: 21%;
   right: -30px;
   transform: rotate(2deg);
   width: 18vw;
   max-width: 100px;
-}
+}*/
 
 .ladybug-img {
-  top: 20%;
-  left: 20px;
+  top: 28%;
+  left: 10px;
   transform: rotate(-8deg);
-  width: 18vw;
+  width: 15vw;
   max-width: 100px;
+}
+
+.washi-tape {
+  width: 100%;
+  height: 40px; /* smaller strip */
+  background-image: url("piano.gif");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  margin: 10px 0 20px 0;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.lace-top {
+  position: absolute;
+  top: -40px;          /* sits right on the top edge */
+  left: 0;
+  width: 100%;     /* matches letter width */
+  height: auto;
+  pointer-events: none;        /* keeps it decorative */
+}
+
+.lace-bottom {
+  position: absolute;
+  bottom: 0;        /* anchors to the bottom edge */
+  left: 0;
+  width: 100%;      /* matches letter width */
+  height: auto;
+  transform: translateY(50%); /* pushes it halfway below the edge */
+  pointer-events: none;
 }
 
 
