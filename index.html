@@ -18,61 +18,64 @@
 
 </head>
 <body>
-  <img src="blinkiesCafe-pN.gif" alt="#eevee" class="top-gif">
-  <main>
-    <div class="letter-top-right" id="liveDateTime"></div>
-    <h1 class="love-header">
-      happy love month, eli
-      <img src="strawbeery-cake.gif" class="love-gif">
-    </h1>
-
-    <iframe data-testid="embed-iframe" style="border-radius:12px" 
-    src="https://open.spotify.com/embed/track/751srcHf5tUqcEa9pRCQwP?
-    utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" 
-    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;
-    picture-in-picture" loading="lazy">
-    </iframe>
-
-    <div class="washi-tape"></div>
-
-
-
-    <p style="color: #4a4a4a;">&nbsp;&nbsp;&nbsp;&nbsp;You have been the greatest partner I could ever ask for. I have cherished every moment when I am with you. You have taught me what it really feels like to be in love and feel loved. There is nothing in this world that could ever replace you. </p>
-    <p style="color: #4a4a4a;">&nbsp;&nbsp;&nbsp;&nbsp;To my lover... </p>
-    <img src="usagi.png" class="usagi-img">
-  <p style="text-align:center;font-size:30px; color: #4a4a4a;">Will you be my Valentine...?</p>
-
-    <div class="options">
-      <label class="option">
-        <input type="radio" name="valentine" id="yesOption">
-        <span style="color: #4a4a4a;" class="text">YES!!!!!!</span>
-      </label>
-
-      <label class="option no-option">
-        <input type="radio" name="valentine" value="no">
-        <span style="color: #4a4a4a;"class="text">Hell no...</span>
-      </label>
+  <div id="lock-overlay">
+  <div id="code-box">
+    <h2>are you actually eli... what's the secret code???</h2>
+    <input type="password" id="secretInput">
+    <button id="unlockBtn">unlock</button>
+    <p style="font-size:14px; color:#555; margin-top:10px;">
+      (hint... what is my car's name?)
+    </p>
     </div>
-    <img src="lace.png" class="lace-top">
-    <img src="lace.png" class="lace-bottom">
+  </div>
+  <div id="page-content" class="locked">
+
+    <img src="blinkiesCafe-pN.gif" alt="#eevee" class="top-gif">
+    <main>
+      <div class="letter-top-right" id="liveDateTime"></div>
+      <h1 class="love-header">
+        happy love month, eli
+        <img src="strawbeery-cake.gif" class="love-gif">
+      </h1>
+
+      <iframe data-testid="embed-iframe" style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/751srcHf5tUqcEa9pRCQwP?
+      utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" 
+      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;
+      picture-in-picture" loading="lazy">
+      </iframe>
+
+      <div class="washi-tape"></div>
+
+
+
+      <p style="color: #4a4a4a;">&nbsp;&nbsp;&nbsp;&nbsp;You have been the greatest partner I could ever ask for. I have cherished every moment when I am with you. You have taught me what it really feels like to be in love and feel loved. There is nothing in this world that could ever replace you. </p>
+      <p style="color: #4a4a4a;">&nbsp;&nbsp;&nbsp;&nbsp;To my lover... </p>
+      <img src="usagi.png" class="usagi-img">
+    <p style="text-align:center;font-size:30px; color: #4a4a4a;">Will you be my Valentine...?</p>
+
+      <div class="options">
+        <label class="option">
+          <input type="radio" name="valentine" id="yesOption">
+          <span style="color: #4a4a4a;" class="text">YES!!!!!!</span>
+        </label>
+
+        <label class="option no-option">
+          <input type="radio" name="valentine" value="no">
+          <span style="color: #4a4a4a;"class="text">Hell no...</span>
+        </label>
+      </div>
+      <img src="lace.png" class="lace-top">
+      <img src="lace.png" class="lace-bottom">
 
 
   
-      <img src="redstamp.png" class="pushpin-img">
-      <img src="megumi_sticker.png" class="megumi-img">
-      <img src="hirono.png" class="poormegumi-img">
-      
-      <img src="ladybug.png" class="ladybug-img">
-
-
-
-
-    
-
-
-    
-
+        <img src="redstamp.png" class="pushpin-img">
+        <img src="megumi_sticker.png" class="megumi-img">
+        <img src="hirono.png" class="poormegumi-img">
+        <img src="ladybug.png" class="ladybug-img">
   </main>
+</div>
 
   
 
@@ -148,6 +151,26 @@
     updateDateTime();            // run immediately
     setInterval(updateDateTime, 1000); // update every second
   </script>
+
+  <script>
+  const unlockBtn = document.getElementById("unlockBtn");
+  const secretInput = document.getElementById("secretInput");
+  const overlay = document.getElementById("lock-overlay");
+  const page = document.getElementById("page-content");
+
+  const SECRET = "caspin"; // change to your real secret code
+
+  unlockBtn.addEventListener("click", () => {
+    if (secretInput.value.trim().toLowerCase() === SECRET.toLowerCase()) {
+      page.classList.remove("locked");
+      overlay.style.display = "none";
+    } else {
+      secretInput.value = "";
+      secretInput.placeholder = "try again";
+    }
+  });
+  </script>
+
 
   
 
