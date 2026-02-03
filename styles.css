@@ -445,6 +445,30 @@ p {
   display: block;
   margin: 1px auto;
 }
+
+.duck-unlock-gif {
+  width: 35px;     /* adjust to your liking */
+  height: auto;
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+.unlock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* optional, keeps it centered */
+    gap: 10px; /* space between input and button */
+}
+
+#secretInput {
+    width: 200px;
+}
+
+#unlockBtn {
+    width: 120px;
+}
+
+
 .popup-content img.duck-gif {
   width: 30px;   /* overrides the 100% rule */
 }
@@ -477,7 +501,7 @@ p {
 
 /* Blur everything until unlocked */
 .locked {
-  filter: blur(100px);
+  filter: blur(67px);
   pointer-events: none;
   user-select: none;
 }
@@ -495,7 +519,7 @@ p {
 
 /* Secret code box */
 #code-box {
-  background: #fff;
+  background: #660810;
   padding: 25px 35px;
   border-radius: 12px;
   text-align: center;
@@ -519,4 +543,8 @@ p {
   color: white;
   border-radius: 6px;
   cursor: pointer;
+}
+
+#code-box button:hover {
+  background-color: #ff6493;
 }

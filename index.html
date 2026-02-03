@@ -20,11 +20,17 @@
 <body>
   <div id="lock-overlay">
   <div id="code-box">
-    <h2>are you actually eli... what's the secret code???</h2>
+    <h2 style="color: white;">prove that you are eli...</h2>
+    <h4 style="color: white; margin-bottom:15px;">(what's the secret code??)</h4>
     <input type="password" id="secretInput">
-    <button id="unlockBtn">unlock</button>
-    <p style="font-size:14px; color:#555; margin-top:10px;">
-      (hint... what is my car's name?)
+    <div>
+      <button id="unlockBtn">
+        <img class="duck-unlock-gif" src="duck.gif" alt="cute duck gif">
+        unlock
+      </button>
+  </div>
+    <p style="font-size:14px; color:#939393; margin-top:10px;">
+      <i>hint! only you besides myself knows and remembers this. what is our ship name for our car buddies, the shark and sackboy?<i>
     </p>
     </div>
   </div>
@@ -158,7 +164,7 @@
   const overlay = document.getElementById("lock-overlay");
   const page = document.getElementById("page-content");
 
-  const SECRET = "caspin"; // change to your real secret code
+  const SECRET = "glerbert"; // change to your real secret code
 
   unlockBtn.addEventListener("click", () => {
     if (secretInput.value.trim().toLowerCase() === SECRET.toLowerCase()) {
